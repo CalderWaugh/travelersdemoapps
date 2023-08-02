@@ -1,0 +1,11 @@
+.error {
+    width:100%;
+}
+.error button {
+    border: none;
+    padding: 10px 30px;
+    width:100%;
+    background-color: lightcoral;
+    border-bottom: 1px rgb(189, 106, 106) solid;
+    cursor: pointer;
+}

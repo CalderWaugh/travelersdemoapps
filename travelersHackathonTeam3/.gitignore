@@ -1,0 +1,4 @@
+frontend/search-enterprise/node_modules
+Back/node_modules
+data_science/data.csv
+data_science/trained_model.pkl

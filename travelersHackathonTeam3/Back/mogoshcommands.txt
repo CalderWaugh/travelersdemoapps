@@ -1,0 +1,15 @@
+//managed by given id
+man1 = db.EmployeeDB.find({manager_id: 1}, {_id: 0, employee_id:1})
+
+//all managers
+db.EmployeeDB.distinct('manager_id')
+
+//managers names and job role
+db.EmployeeDB.find({employee_id: {$in: temp}}, {_id: 0, name: 1, job_role: 1})
+
+//salary gt
+db.EmployeeDB.find({salary: {$gt: 100000})
+
+//import
+mongoimport --db Org --collection Employee --type csv --headerline --ignoreBlanks C:\final\searchable_enterprise_directory\data.csv
+

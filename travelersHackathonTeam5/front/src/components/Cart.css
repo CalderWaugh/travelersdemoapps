@@ -1,0 +1,15 @@
+.bottom {
+    width: 100%;
+    display:flexbox;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+}
+
+.noitems {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}

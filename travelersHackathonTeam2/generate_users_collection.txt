@@ -1,0 +1,5 @@
+db.users.insertOne({username:'john', password:'doe', role:'emp', response:'', feedback:[]})
+db.users.insertOne({username:'alice', password:'bob', role:'man', response:'', employees:['johndoe1','johndoe2','johndoe3']})
+db.users.insertOne({username:'johndoe1', password:'johndoe1', role:'emp', response:'', feedback:[]})
+db.users.insertOne({username:'johndoe2', password:'johndoe2', role:'emp', response:'', feedback:[]})
+db.users.insertOne({username:'johndoe3', password:'johndoe3', role:'emp', response:'', feedback:[]})

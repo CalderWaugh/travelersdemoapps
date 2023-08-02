@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.App {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 50vh;
+}
+
+.header {
+	font-family: 'Montserrat', Arial, sans-serif;
+	font-weight: bold;
+	color: #fd1a1d;
+	text-align: center;
+	padding: 0px;
+	padding-right: 200px;
+	padding-left: 200px;
+	border: 10px solid #b11217;
+	border-radius: 10px;
+	margin: 30px;
+}
+
+.header-one {
+	font-size: 50px;
+	margin: 0px;
+	margin-top: 20px;
+}
+
+.header-two {
+	font-size: 30px;
+	margin: 0px;
+	margin-bottom: 20px;
+}
+
+.header-three {
+	font-family: 'Montserrat', Arial, sans-serif;
+	font-weight: bold;
+	color: #fd1a1d;
+	text-align: center;
+	font-size: 30px;
+	margin: 0px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-left: 360px solid #b11217;
+	border-right: 360px solid #b11217;
+	border-radius: 5px;
+}
+
+.form-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input-field {
+	padding: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	width: 225px;
+	height: 20px;
+	transition: border-color 0.3s ease-in-out;
+}
+
+.input-field:focus {
+	outline: none;
+	border-color: #fd1a1d;
+}
+
+.button {
+	padding: 8px 16px;
+	margin-bottom: 10px;
+	background-color: #fd1a1d;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+	background-color: #b11217;
+}
+
+.success {
+	padding: 5px;
+	margin: 10px;
+	color: green;
+	text-align: center;
+}
+
+.failed {
+	padding: 5px;
+	margin: 10px;
+	color: red;
+	text-align: center;
+}
+
+.dropdown {
+	width: 238px;
+	height: 30px;
+	padding: 5px;
+	color: #fd1a1d;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	margin-bottom: 10px;
+}
+
+.dropdown:focus {
+	outline: none;
+	border-color: #fd1a1d;
+}
+
+.answer-box {
+	width: 100%;
+	height: 150px;
+	resize: vertical;
+	font-size: 14px;
+}
+
+.feedback {
+	text-align: left;
+	width: 600px;
+	margin: 0px;
+	margin-left: 20px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size: 14px;
+}

@@ -1,0 +1,64 @@
+.navbar {
+    padding: 10px;
+    background-color: #e01719;
+    color: white;
+    display: flex;
+    align-items: center; /* Add this line to vertically center the navbar content */
+    position: relative;
+  }
+  
+  .navbar-logo {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: auto;
+  }
+  
+  .navbar-logo a {
+    display: flex; /* Add this line to align the logo vertically within the navbar logo container */
+    align-items: center; /* Add this line to align the logo vertically within the navbar logo container */
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logo {
+    width: 20px;
+    margin-left: 10px; /* Add this line to provide spacing between the logo and the text */
+    filter: invert(1);
+  }
+  
+  .nav-menu {
+    display: flex; /* Change display to flex */
+    align-items: center; /* Add this line to vertically center the menu items within the navbar */
+    list-style: none;
+    text-align: center;
+    margin-left: auto; /* Add this line to push the menu items to the right */
+  }
+  
+  .nav-links {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-links:hover {
+    background-color: rgb(219, 68, 68);
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+  }
+  
+  .nav-links:hover {
+    color: white;
+  }
+  
+  .fa-bars {
+    color: #fff;
+  }
+  
+  .nav-links-mobile {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
