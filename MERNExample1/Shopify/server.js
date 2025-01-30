@@ -89,6 +89,6 @@ const sslOptions = {
 };
 
 // Create HTTPS server
-https.createServer(sslOptions, app).listen(PORT, () => {
+https.createServer(app).listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
