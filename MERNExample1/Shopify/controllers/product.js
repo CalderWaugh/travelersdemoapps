@@ -198,7 +198,9 @@ exports.listCategories = (req, res) => {
 exports.listBySearch = (req, res) => {
   let order = req.body.order ? req.body.order : 'desc';
   let sortBy = req.body.sortBy ? req.body.sortBy : '_id';
+  //Added boundaries for limit to avoid excessive get sizes
   let limit = req.body.limit ? parseInt(req.body.limit) : 100;
+  limit = Math.max(Math.min(limit,200),1)
   let skip = parseInt(req.body.skip);
   let findArgs = {};
 
