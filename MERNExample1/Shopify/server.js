@@ -15,6 +15,8 @@ const productRoutes = require('./routes/product');
 const braintreeRoutes = require('./routes/braintree');
 const orderRoutes = require('./routes/order');
 
+const { rateLimit } = require("express-rate-limit");
+
 // app
 const app = express();
 
@@ -38,6 +40,16 @@ const connectDB = async () => {
   }
 };
 connectDB();
+
+// rate limiting
+const limiter = rateLimit({
+	windowMs: 15 * 60 * 1000, // 15 minutes
+	limit: 5,
+	standardHeaders: 'draft-8', 
+	legacyHeaders: false, 
+})
+
+app.use(limiter)
 
 // middlewares
 app.use(morgan('dev'));
