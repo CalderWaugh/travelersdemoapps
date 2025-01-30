@@ -48,7 +48,7 @@ connectDB();
 // rate limiting
 const limiter = rateLimit({
 	windowMs: 15 * 60 * 1000, // 15 minutes
-	limit: 5,
+	limit: 50,
 	standardHeaders: 'draft-8', 
 	legacyHeaders: false, 
 })
@@ -89,6 +89,6 @@ const sslOptions = {
 };
 
 // Create HTTPS server
-https.createServer(app).listen(PORT, () => {
+https.createServer(sslOptions,app).listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
