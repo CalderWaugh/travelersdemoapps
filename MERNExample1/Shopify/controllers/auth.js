@@ -6,8 +6,9 @@ const { errorHandler } = require('../helpers/dbErrorHandler');
 require('dotenv').config();
 
 exports.signup = (req, res) => {
-  // console.log('req.body', req.body);
-  const user = new User(req.body);
+  // Destructure the required fields from req.body to prevent elevation / undesired params
+  const { username, password, email } = req.body;
+  const user = new User({ username, password, email });
   user.save((err, user) => {
     if (err) {
       return res.status(400).json({
@@ -75,7 +76,7 @@ exports.isAuth = (req, res, next) => {
 exports.isAdmin = (req, res, next) => {
   if (req.profile.role === 0) {
     return res.status(403).json({
-      error: 'Admin resource! Access denied',
+      error: 'Access denied',
     });
   }
   next();

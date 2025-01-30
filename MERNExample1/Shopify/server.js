@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+//ADDING SSL
+const https = require('https');
+const fs = require('fs');
+//
 const cors = require('cors');
 const path = require('path');
 const expressValidator = require('express-validator');
@@ -77,7 +81,14 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const PORT = process.env.PORT || 5000;
+//HTTPS
+const sslOptions = {
+  key: fs.readFileSync(path.resolve(__dirname, 'key.pem')),
+  cert: fs.readFileSync(path.resolve(__dirname, 'cert.pem')),
+  ca: fs.readFileSync(path.resolve(__dirname, 'csr.pem'))
+};
 
-app.listen(PORT, () => {
+// Create HTTPS server
+https.createServer(sslOptions, app).listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
